@@ -1,16 +1,19 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+import clsx from "clsx";
+
+// Button.js
+export const Button = ({ variant, children }) => {
+  // Базові стилі кнопки з кількома варіантами відображення
+  return <button className={clsx("button", variant)}>{children}</button>;
+};
+
+// LoginButton.js
+export const LoginButton = () => {
+  // Унікальна логіка кнопки логіна
+  return <Button variant="primary">Login</Button>;
+};
+
+// FollowButton.js
+export const FollowButton = () => {
+  // Унікальна логіка кнопки підписки
+  return <Button variant="secondary">Follow</Button>;
 };
