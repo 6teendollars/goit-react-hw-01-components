@@ -1,19 +1,27 @@
-import clsx from "clsx";
+import React from 'react';
+import { Profile } from 'components/Profile/Profile';
+import user from 'components/Profile/user.json';
 
-// Button.js
-export const Button = ({ variant, children }) => {
-  // Базові стилі кнопки з кількома варіантами відображення
-  return <button className={clsx("button", variant)}>{children}</button>;
-};
+import { Statistics } from './Statistics/Statistics';
+import data from 'components/Statistics/data.json';
 
-// LoginButton.js
-export const LoginButton = () => {
-  // Унікальна логіка кнопки логіна
-  return <Button variant="primary">Login</Button>;
-};
+import { FriendList } from './FriendList/FriendList';
+import friends from 'components/FriendList/friends.json';
 
-// FollowButton.js
-export const FollowButton = () => {
-  // Унікальна логіка кнопки підписки
-  return <Button variant="secondary">Follow</Button>;
-};
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import transactions from 'components/TransactionHistory/transaction.json'; 
+
+export const App = () => (
+  <>
+  <Profile
+    username={user.username}
+    tag={user.tag}
+    location={user.location}
+    avatar={user.avatar}
+    stats={user.stats}
+  />
+<Statistics title="Upload stats" stats={data} />
+<FriendList friends={friends} />;
+<TransactionHistory items={ transactions } />;
+</>
+);
