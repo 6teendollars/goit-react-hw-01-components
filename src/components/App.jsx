@@ -11,6 +11,8 @@ import friends from 'components/FriendList/friends.json';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 import transactions from 'components/TransactionHistory/transaction.json'; 
 
+
+
 export const App = () => (
   <>
   <Profile
@@ -20,8 +22,10 @@ export const App = () => (
     avatar={user.avatar}
     stats={user.stats}
   />
-<Statistics title="Upload stats" stats={data} />
-<FriendList friends={friends} />;
-<TransactionHistory items={ transactions } />
+  <Statistics title="Upload stats" stats={data} />
+  <FriendList friends={friends} />;
+  <TransactionHistory items={ transactions } />
 </>
 );
+
+
