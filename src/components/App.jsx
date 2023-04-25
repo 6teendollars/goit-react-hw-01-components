@@ -1,3 +1,4 @@
+// import { BrowserRouter as Router } from "react-router-dom";
 import React from 'react';
 import { Profile } from 'components/Profile/Profile';
 import user from 'components/Profile/user.json';
@@ -10,7 +11,6 @@ import friends from 'components/FriendList/friends.json';
 
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 import transactions from 'components/TransactionHistory/transaction.json'; 
-
 
 
 export const App = () => (
