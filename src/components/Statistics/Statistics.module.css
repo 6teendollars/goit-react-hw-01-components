@@ -1,0 +1,22 @@
+.statistics{
+background-color: beige;
+width: 400px;
+margin: 10px 0 0 10px;
+}
+
+.title{
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.stat_list{
+    display: flex;
+    list-style: none;
+    /* gap: 6px; */
+    padding-left: 0;
+    justify-content: space-evenly;
+}
+
+.percentage{
+    background-color: rgb(134, 203, 208);
+}
